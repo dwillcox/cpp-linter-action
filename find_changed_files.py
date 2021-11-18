@@ -20,11 +20,12 @@ def find_files(SHAs=None):
     print(files)
 
     # look for whether any files have changed in these directories
-    flag_dirs = {'diffusion': ('USE_DIFFUSION', 'science/flame_wave'),
-                 'gravity': ('USE_GRAVITY', 'science/flame_wave'),
-                 'mhd': ('USE_MHD', 'mhd_tests/BrioWu'),
-                 'radiation': ('USE_RADIATION', 'radiation_tests/Rad2Tshock'),
-                 'sdc': ('USE_TRUE_SDC', 'reacting_tests/reacting_convergence')}
+    #flag_dirs = {'diffusion': ('USE_DIFFUSION', 'science/flame_wave'),
+    #             'gravity': ('USE_GRAVITY', 'science/flame_wave'),
+    #             'mhd': ('USE_MHD', 'mhd_tests/BrioWu'),
+    #             'radiation': ('USE_RADIATION', 'radiation_tests/Rad2Tshock'),
+    #             'sdc': ('USE_TRUE_SDC', 'reacting_tests/reacting_convergence')}
+    flag_dirs = {}
 
     # see which directories contain changed files
     changed_directories = set()
@@ -43,7 +44,7 @@ def find_files(SHAs=None):
 
     # no special flags, use default
     if not problems:
-        problems['science/flame_wave'] = ""
+        problems['Exec/ABL'] = ""
 
     print(problems)
 
