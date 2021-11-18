@@ -44,7 +44,7 @@ def find_files(SHAs=None):
 
     # no special flags, use default
     if not problems:
-        problems['Exec/ABL'] = ""
+        problems['ABL'] = ""
 
     print(problems)
 
