@@ -25,22 +25,22 @@ def find_files(SHAs=None):
     #             'mhd': ('USE_MHD', 'mhd_tests/BrioWu'),
     #             'radiation': ('USE_RADIATION', 'radiation_tests/Rad2Tshock'),
     #             'sdc': ('USE_TRUE_SDC', 'reacting_tests/reacting_convergence')}
-    flag_dirs = {}
+    #flag_dirs = {}
 
     # see which directories contain changed files
-    changed_directories = set()
-    for f in files:
-        d = f.split('/')[1]
-        if d in flag_dirs:
-            changed_directories.add(d)
+    #changed_directories = set()
+    #for f in files:
+    #    d = f.split('/')[1]
+    #    if d in flag_dirs:
+    #        changed_directories.add(d)
 
     problems = {}
-    for d in changed_directories:
-        flag, prob = flag_dirs[d]
-        if prob in problems:
-            problems[prob] += f' {flag}=TRUE'
-        else:
-            problems[prob] = f'{flag}=TRUE'
+    #for d in changed_directories:
+    #    flag, prob = flag_dirs[d]
+    #    if prob in problems:
+    #        problems[prob] += f' {flag}=TRUE'
+    #    else:
+    #        problems[prob] = f'{flag}=TRUE'
 
     # no special flags, use default
     if not problems:
